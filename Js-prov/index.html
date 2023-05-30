@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+  <div id="EventDiv">
+
+    <h1 id="demo"></h1>
+    <p id="time"></p>
+    <img id="pic" src="dice-1.png" style=" height: 100px; width: 100px; ">
+  
+  </div>
+
+  <div class="button-container">
+    <button class = "hover-effect" id="bgchange">Change Bg</button>
+    <button class = "hover-effect" id="textshow">Good vibes</button>
+    <button class = "hover-effect" id="timeshow">Time</button>
+    <button class = "hover-effect" id="changepic">Change picure</button>
+    <button class = "hover-effect" id="hidepic">Hide picture</button>
+    <button class = "hover-effect" id="showpic">Show Picture</button>
+  
+  </div>
+    <script>
+
+
+      // background change
+      function changeBackground()
+      {
+        var background = document.body;
+        background.style.backgroundColor = "lightblue";
+      }
+      var changebg = document.getElementById("bgchange");
+      changebg.addEventListener("click", changeBackground);
+
+
+      // show text
+      function showText()
+      {
+        var showtext = document.getElementById("demo");
+        showtext.innerHTML="Be the best version of you!"
+      }
+      var textbutton = document.getElementById("textshow");
+      textbutton.addEventListener("click", showText);
+
+
+      // show time
+      function showTime()
+      {
+        var showtime = document.getElementById("time");
+        var currentdate = new Date();
+        var currenttime = currentdate.toUTCString();
+        showtime.innerHTML = currenttime;
+      }
+      var timebutton = document.getElementById("timeshow");
+      timebutton.addEventListener("click", showTime);
+
+
+      // change image
+      function changeImage()
+      {
+        var image = document.getElementById("pic");
+        image.src = "dice-6.png"
+      }
+      var changebutton = document.getElementById("changepic");
+      changebutton.addEventListener("click", changeImage);
+
+
+      // hide image
+      function hideImage()
+      {
+        var image = document.getElementById("pic");
+        image.style.visibility = "hidden";
+      }
+      var hidebutton = document.getElementById("hidepic");
+      hidebutton.addEventListener("click", hideImage);
+
+
+      // show image
+      function showImage()
+      {
+        var image = document.getElementById("pic");
+        image.style.visibility = "visible";
+      }
+      var showbutton = document.getElementById("showpic");
+      showbutton.addEventListener("click", showImage);
+
+
+
+    </script>
+
+</body>
+</html>
